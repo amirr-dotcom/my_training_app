@@ -1,0 +1,12 @@
+{
+  "app": {
+    "name": "My Training App"
+  },
+  "common": {
+    "no_more": "No More Data"
+  },
+  "home_screen": {
+    "title": "Trainings",
+    "sub_title": "Highlights"
+  }
+}
