@@ -15,20 +15,17 @@ CustomTransitionPage buildPageWithDefaultTransition<T>({
   return CustomTransitionPage<T>(
     key: state.pageKey,
     child: child,
-    transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-        FadeTransition(
-          opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
-          child: SelectionArea(
-              child: Stack(
-            children: [
-              Container(
-                color: ColorConstant.primary,
-                child: SafeArea(
-                    child: child),
-              ),
-            ],
-          )),
-        ),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) => FadeTransition(
+      opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+      child: Stack(
+        children: [
+          Container(
+            color: ColorConstant.primary,
+            child: SafeArea(child: child),
+          ),
+        ],
+      ),
+    ),
   );
 }
 
@@ -36,19 +33,12 @@ List<RouteBase> routes = [
   GoRoute(
     name: HomeScreen.name,
     path: HomeScreen.path,
-    pageBuilder: (context, state) => buildPageWithDefaultTransition(
-        context: context, state: state,
-        child: ChangeNotifierProvider<TrainingsViewModel>(
-            create: (_)=> TrainingsViewModel(),
-            child: const HomeScreen())),
+    pageBuilder: (context, state) =>
+        buildPageWithDefaultTransition(context: context, state: state, child: ChangeNotifierProvider<TrainingsViewModel>(create: (_) => TrainingsViewModel(), child: const HomeScreen())),
   ),
   GoRoute(
     name: TrainingDetailsScreen.name,
     path: TrainingDetailsScreen.path,
-    pageBuilder: (context, state) => buildPageWithDefaultTransition(
-        context: context, state: state,
-        child:  TrainingDetailsScreen(
-          id: state.pathParameters['id']
-        )),
+    pageBuilder: (context, state) => buildPageWithDefaultTransition(context: context, state: state, child: TrainingDetailsScreen(id: state.pathParameters['id'])),
   ),
 ];
