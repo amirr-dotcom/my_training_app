@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_training_app/app_manager/constant/app_constant.dart';
-import 'package:my_training_app/app_manager/constant/color_constant.dart';
 import 'package:my_training_app/app_manager/constant/locale_constant.dart';
 import 'package:my_training_app/app_manager/theme/app_theme.dart';
 import 'package:my_training_app/routes.dart';

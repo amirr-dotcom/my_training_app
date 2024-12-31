@@ -3,10 +3,16 @@
     "name": "My Training App"
   },
   "common": {
-    "no_more": "No More Data"
+    "no_more": "No More Data",
+    "no_data": "No Data",
+    "filter": "Filter",
+    "search": "Search"
   },
   "home_screen": {
     "title": "Trainings",
     "sub_title": "Highlights"
+  },
+  "sort_and_filters": {
+    "title": "Sort and Filters"
   }
 }

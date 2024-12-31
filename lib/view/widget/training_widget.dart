@@ -3,9 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_training_app/app_manager/component/my_cache_image.dart';
 import 'package:my_training_app/app_manager/constant/color_constant.dart';
-import 'package:my_training_app/app_manager/helper/navigation_helper.dart';
 import 'package:my_training_app/model/training_model.dart';
-import 'package:my_training_app/view/screens/training_details_screen.dart';
 
 class TrainingWidget extends StatelessWidget {
   final Training training;
@@ -50,7 +48,7 @@ class TrainingWidget extends StatelessWidget {
                       ),
                       child: Text(
                         training.timeRange.toString(),
-                        style: const TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w800),
+                        style: const TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.w800),
                       ),
                     ),
                     Text(
@@ -63,7 +61,7 @@ class TrainingWidget extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: SizedBox(
-                  height: 120,
+                  height: 150,
                   child: DottedLine(
                     direction: Axis.vertical,
                     dashColor: Colors.grey,
@@ -119,11 +117,11 @@ class TrainingWidget extends StatelessWidget {
                             children: [
                               Text(
                                 training.traineeTitle ?? "",
-                                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                                style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 training.traineeName ?? "",
-                                style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.grey),
+                                style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w500, color: Colors.grey),
                               ),
                             ],
                           ),

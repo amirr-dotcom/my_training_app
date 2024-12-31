@@ -13,6 +13,8 @@ class TrainingDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final textTheme = theme.textTheme;
     return id==null? const Center(child: CircularProgressIndicator()):ChangeNotifierProvider<TrainingDetailsViewModel>(
       create: (_)=> TrainingDetailsViewModel(int.parse(id!)),
       child: Selector<TrainingDetailsViewModel, (bool, Training?)>(
@@ -28,10 +30,22 @@ class TrainingDetailsScreen extends StatelessWidget {
             body: loading? const Center(child: CircularProgressIndicator()):SingleChildScrollView(
               child: Column(
                 children: [
-                  trainingDetails ==null? Container():TrainingWidget(training: trainingDetails!,),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 40,horizontal: 20),
-                    child: Text("Other Details"),
+                  trainingDetails ==null? Container():TrainingWidget(training: trainingDetails,),
+                   Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 40,horizontal: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                         Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Text("Summary",
+                          style: textTheme.titleLarge?.copyWith(
+                            color: Colors.black
+                          ),),
+                        ),
+                        Text(trainingDetails?.summary??""),
+                      ],
+                    ),
                   )
                 ],
               ),

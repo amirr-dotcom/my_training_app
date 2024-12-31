@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_training_app/app_manager/helper/navigation_helper.dart';
-import 'package:my_training_app/view/screens/splash_screen.dart';
+import 'package:my_training_app/view/screens/home_screen/home_screen.dart';
 
 class ErrorScreen extends StatelessWidget {
   const ErrorScreen({super.key});
@@ -28,7 +28,7 @@ class ErrorScreen extends StatelessWidget {
                   child: TextButton(
                     key: const Key("return_to_home"),
                     onPressed: () {
-                      NavigationHelper.pushNamed(context, SplashScreen.name);
+                      NavigationHelper.pushNamed(context, HomeScreen.name);
                     },
                     child: const Text("Return to home"),
                   ),

@@ -8,6 +8,7 @@ class Training {
   String? timeRange;
   String? traineeName;
   String? traineeTitle;
+  String? summary;
 
   Training(
       {this.url,
@@ -18,6 +19,7 @@ class Training {
         this.discountPrice,
         this.timeRange,
         this.traineeName,
+        this.summary,
         this.traineeTitle});
 
   Training.fromJson(Map<dynamic, dynamic> json) {
@@ -30,6 +32,7 @@ class Training {
     timeRange = json['time_range'];
     traineeName = json['trainee_name'];
     traineeTitle = json['trainee_title'];
+    summary = json['summary'];
   }
 
   Map<String, dynamic> toJson() {
@@ -43,6 +46,7 @@ class Training {
     data['time_range'] = timeRange;
     data['trainee_name'] = traineeName;
     data['trainee_title'] = traineeTitle;
+    data['summary'] = summary;
     return data;
   }
 }

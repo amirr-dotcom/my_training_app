@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_training_app/app_manager/constant/color_constant.dart';
-import 'package:my_training_app/app_manager/helper/locale_helper.dart';
 import 'package:my_training_app/view/screens/home_screen/widget/filter_widget.dart';
 import 'package:my_training_app/view/screens/home_screen/widget/home_carousel.dart';
 
@@ -26,6 +25,7 @@ class HomeAppBar extends StatelessWidget {
         ),
       ],
     );
+    double topPadding = MediaQuery.of(context).padding.top + 140;
     return SliverAppBar(
       backgroundColor: theme.primaryColor,
       expandedHeight: 380,
@@ -35,19 +35,30 @@ class HomeAppBar extends StatelessWidget {
         builder: (BuildContext context, BoxConstraints constraints) {
           final top = constraints.biggest.height;
           final isCollapsed = top <= kToolbarHeight + MediaQuery.of(context).padding.top;
+         Widget animatedTitle = AnimatedAlign(
+           duration: const Duration(milliseconds: 200),
+           alignment: isCollapsed ? Alignment.center : Alignment.topLeft,
+           child: Padding(
+             padding: EdgeInsets.only(top: isCollapsed ? 0 : topPadding),
+             child: Text(
+               title,
+               style: const TextStyle(fontSize: 20, color: Colors.white),
+             ),
+           ),
+         );
           return FlexibleSpaceBar(
             centerTitle: true,
             titlePadding: const EdgeInsets.symmetric(horizontal: 20),
-            title: AnimatedAlign(
-              duration: const Duration(milliseconds: 200),
-              alignment: isCollapsed ? Alignment.center : Alignment.topLeft,
-              child: Padding(
-                padding: EdgeInsets.only(top: isCollapsed ? 0 : MediaQuery.of(context).padding.top + 140),
-                child: Text(
-                  title,
-                  style: const TextStyle(fontSize: 20, color: Colors.white),
-                ),
-              ),
+            title: isCollapsed? animatedTitle
+            :Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: animatedTitle),
+                Padding(
+                  padding:  EdgeInsets.only(top: topPadding + 6),
+                  child: const Icon(Icons.list, color: Colors.white, size: 20,),
+                )
+              ],
             ),
             background: Stack(
               children: [

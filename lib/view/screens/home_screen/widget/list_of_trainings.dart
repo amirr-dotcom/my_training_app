@@ -20,14 +20,28 @@ class _ListOfTrainingsState extends State<ListOfTrainings> {
     final theme = Theme.of(context);
     return Selector<TrainingsViewModel, (bool, bool, List<Training>)>(
         shouldRebuild: (prev, nex) => true,
-        selector: (buildContext, vm) => (vm.loading, vm.noMore, vm.trainings),
+        selector: (buildContext, vm) => (vm.loading, vm.noMore, vm.filteredTrainings),
         builder: (context, (bool, bool, List<Training>) data, child) {
           bool loading = data.$1;
           bool noMore = data.$2;
           List<Training> trainings = data.$3;
-          return SliverPadding(
-            padding: const EdgeInsets.only(top: 10),
-            sliver: SliverList(
+
+          Widget sliverWidget() {
+            if (loading && trainings.isEmpty) {
+              return const SliverFillRemaining(child: Center(child: CircularProgressIndicator()));
+            }
+            if (trainings.isEmpty) {
+              return SliverFillRemaining(
+                child: Center(
+                  child: Text(
+                    LocaleHelper.common('no_data'),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: theme.primaryColor, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              );
+            }
+            return SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   if (index == trainings.length && noMore) {
@@ -58,7 +72,12 @@ class _ListOfTrainingsState extends State<ListOfTrainings> {
                 },
                 childCount: (loading || noMore) ? trainings.length + 1 : trainings.length,
               ),
-            ),
+            );
+          }
+
+          return SliverPadding(
+            padding: const EdgeInsets.only(top: 10),
+            sliver: sliverWidget(),
           );
         });
   }

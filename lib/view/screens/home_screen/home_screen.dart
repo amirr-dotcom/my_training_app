@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   static const String name = "home_screen";
-  static const String path = "/$name";
+  static const String path = "/";
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

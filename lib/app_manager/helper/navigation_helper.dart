@@ -38,9 +38,9 @@ class NavigationHelper {
 
   static void pop<T extends Object?>(
       BuildContext context,
-      String name) {
+      {String? name}) {
     try {
-      if(!AppService().getKIsWeb()) {
+      if(!AppService().getKIsWeb() || name == null) {
         return context.pop();
       } else{
         return context.goNamed(name);

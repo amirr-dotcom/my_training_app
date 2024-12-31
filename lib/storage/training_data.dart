@@ -2,223 +2,219 @@ class TrainingData {
   static List<Map> trainingsProvided = [
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250",
-      "title": "Training Program 1",
+      "title": "Safe Scrum Master",
       "address": "202 Birch Blvd, Lakeview, FL 33101",
       "date": "2025-01-13",
       "price": 307.2,
       "discount_price": 311.32,
-      "time_range": "9:00 - 18:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Jane Smith",
-      "trainee_title": "Junior Trainer"
+      "trainee_title": "Junior Trainer",
+      "summary": "A comprehensive training for mastering the Scrum framework and becoming an effective Scrum Master."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=251",
-      "title": "Training Program 2",
+      "title": "Safe Scrum Master",
       "address": "789 Pine Ln, Suburbia, TX 75001",
       "date": "2025-01-09",
       "price": 224.39,
       "discount_price": 99.06,
-      "time_range": "10:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Alex Johnson",
-      "trainee_title": "Coach"
+      "trainee_title": "Coach",
+      "summary": "Training designed to help professionals become Scrum Masters using the SAFe methodology."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=252",
-      "title": "Training Program 3",
+      "title": "Safe Scrum Master",
       "address": "456 Oak Rd, Townsville, CA 90010",
       "date": "2025-01-04",
       "price": 487.52,
       "discount_price": 118.65,
-      "time_range": "8:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Emily Davis",
-      "trainee_title": "Senior Trainer"
+      "trainee_title": "Senior Trainer",
+      "summary": "A detailed course to train Scrum Masters in leading agile teams and scaling Scrum practices."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=253",
-      "title": "Training Program 4",
+      "title": "Safe Scrum Master",
       "address": "456 Oak Rd, Townsville, CA 90010",
       "date": "2025-01-27",
       "price": 463.03,
       "discount_price": 432.83,
-      "time_range": "8:00 - 18:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Michael Brown",
-      "trainee_title": "Training Specialist"
+      "trainee_title": "Training Specialist",
+      "summary": "In-depth Scrum Master training using SAFe principles for agile team leadership."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=254",
-      "title": "Training Program 5",
+      "title": "Safe Scrum Master",
       "address": "789 Pine Ln, Suburbia, TX 75001",
       "date": "2025-01-16",
       "price": 291.13,
       "discount_price": 256.13,
-      "time_range": "8:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Emily Davis",
-      "trainee_title": "Lead Instructor"
+      "trainee_title": "Lead Instructor",
+      "summary": "A foundational course for anyone looking to become a Scrum Master using the SAFe methodology."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=255",
-      "title": "Training Program 6",
+      "title": "Project Manager",
       "address": "789 Pine Ln, Suburbia, TX 75001",
       "date": "2025-01-10",
       "price": 496.34,
       "discount_price": 334.75,
-      "time_range": "8:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Michael Brown",
-      "trainee_title": "Coach"
+      "trainee_title": "Coach",
+      "summary": "A comprehensive project management training for individuals aiming to take leadership roles in managing projects."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=256",
-      "title": "Training Program 7",
+      "title": "Project Manager",
       "address": "123 Main St, Cityville, NY 10001",
       "date": "2025-01-12",
       "price": 153.5,
       "discount_price": 92.16,
-      "time_range": "9:00 - 16:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "John Doe",
-      "trainee_title": "Senior Trainer"
+      "trainee_title": "Senior Trainer",
+      "summary": "An introductory project management course for beginners looking to expand their skills."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=257",
-      "title": "Training Program 8",
+      "title": "Project Manager",
       "address": "789 Pine Ln, Suburbia, TX 75001",
       "date": "2025-01-19",
       "price": 443.89,
       "discount_price": 276.5,
-      "time_range": "9:00 - 18:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Jane Smith",
-      "trainee_title": "Training Specialist"
+      "trainee_title": "Training Specialist",
+      "summary": "A course focused on advanced project management techniques, including risk management and budgeting."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=258",
-      "title": "Training Program 9",
+      "title": "Project Manager",
       "address": "202 Birch Blvd, Lakeview, FL 33101",
       "date": "2025-01-11",
       "price": 291.39,
       "discount_price": 255.65,
-      "time_range": "8:00 - 16:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Alex Johnson",
-      "trainee_title": "Lead Instructor"
+      "trainee_title": "Lead Instructor",
+      "summary": "A practical course to enhance project management skills, with a focus on stakeholder management."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=259",
-      "title": "Training Program 10",
+      "title": "Project Manager",
       "address": "456 Oak Rd, Townsville, CA 90010",
       "date": "2025-01-15",
       "price": 412.83,
       "discount_price": 289.51,
-      "time_range": "8:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Michael Brown",
-      "trainee_title": "Junior Trainer"
+      "trainee_title": "Junior Trainer",
+      "summary": "Training aimed at those seeking project management certification and real-world applications."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=260",
-      "title": "Training Program 11",
+      "title": "Flutter Developer",
       "address": "123 Main St, Cityville, NY 10001",
       "date": "2025-01-22",
       "price": 322.55,
       "discount_price": 287.45,
-      "time_range": "9:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "John Doe",
-      "trainee_title": "Coach"
+      "trainee_title": "Coach",
+      "summary": "A course aimed at developing proficiency in building mobile apps using the Flutter framework."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=261",
-      "title": "Training Program 12",
+      "title": "Flutter Developer",
       "address": "789 Pine Ln, Suburbia, TX 75001",
       "date": "2025-01-18",
       "price": 279.33,
       "discount_price": 253.74,
-      "time_range": "9:00 - 18:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Emily Davis",
-      "trainee_title": "Training Specialist"
+      "trainee_title": "Training Specialist",
+      "summary": "Flutter app development training focused on creating cross-platform applications."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=262",
-      "title": "Training Program 13",
+      "title": "Flutter Developer",
       "address": "123 Main St, Cityville, NY 10001",
       "date": "2025-01-14",
       "price": 191.82,
       "discount_price": 120.34,
-      "time_range": "8:00 - 17:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Jane Smith",
-      "trainee_title": "Senior Trainer"
+      "trainee_title": "Senior Trainer",
+      "summary": "An introductory course for building mobile apps using the Flutter framework."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=263",
-      "title": "Training Program 14",
+      "title": "Flutter Developer",
       "address": "456 Oak Rd, Townsville, CA 90010",
       "date": "2025-01-24",
       "price": 199.23,
       "discount_price": 168.72,
-      "time_range": "9:00 - 18:00",
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Alex Johnson",
-      "trainee_title": "Junior Trainer"
+      "trainee_title": "Junior Trainer",
+      "summary": "Focused on practical skills needed to create fully functional mobile applications using Flutter."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=264",
-      "title": "Training Program 15",
-      "address": "789 Pine Ln, Suburbia, TX 75001",
+      "title": "Flutter Developer",
+      "address": "202 Birch Blvd, Lakeview, FL 33101",
       "date": "2025-01-20",
-      "price": 194.79,
-      "discount_price": 235.66,
-      "time_range": "9:00 - 18:00",
-      "trainee_name": "Jane Smith",
-      "trainee_title": "Junior Trainer"
+      "price": 315.34,
+      "discount_price": 287.45,
+      "time_range": "9:00 am - 9:00 pm",
+      "trainee_name": "Michael Brown",
+      "trainee_title": "Lead Instructor",
+      "summary": "In-depth training for developers to master Flutter for mobile app development."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=265",
-      "title": "Training Program 16",
-      "address": "456 Oak Rd, Townsville, CA 90010",
-      "date": "2025-01-16",
-      "price": 186.57,
-      "discount_price": 159.6,
-      "time_range": "9:00 - 16:00",
-      "trainee_name": "Jane Smith",
-      "trainee_title": "Training Specialist"
+      "title": "HR Manager",
+      "address": "123 Main St, Cityville, NY 10001",
+      "date": "2025-01-14",
+      "price": 137.35,
+      "discount_price": 137.09,
+      "time_range": "9:00 am - 9:00 pm",
+      "trainee_name": "John Doe",
+      "trainee_title": "Senior Trainer",
+      "summary": "An HR management course focusing on the key skills needed for human resources leadership."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=266",
-      "title": "Training Program 17",
-      "address": "123 Main St, Cityville, NY 10001",
+      "title": "HR Manager",
+      "address": "789 Pine Ln, Suburbia, TX 75001",
       "date": "2025-01-17",
-      "price": 137.35,
-      "discount_price": 214.97,
-      "time_range": "10:00 - 16:00",
+      "price": 443.24,
+      "discount_price": 283.70,
+      "time_range": "9:00 am - 9:00 pm",
       "trainee_name": "Emily Davis",
-      "trainee_title": "Coach"
+      "trainee_title": "Lead Instructor",
+      "summary": "This course prepares professionals for leading HR departments and managing workforce strategies."
     },
     {
       "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=267",
-      "title": "Training Program 18",
-      "address": "123 Main St, Cityville, NY 10001",
-      "date": "2025-01-21",
-      "price": 321.77,
-      "discount_price": 137.09,
-      "time_range": "10:00 - 18:00",
-      "trainee_name": "Alex Johnson",
-      "trainee_title": "Junior Trainer"
-    },
-    {
-      "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=268",
-      "title": "Training Program 19",
-      "address": "789 Pine Ln, Suburbia, TX 75001",
+      "title": "HR Manager",
+      "address": "456 Oak Rd, Townsville, CA 90010",
       "date": "2025-01-25",
-      "price": 443.24,
-      "discount_price": 283.7,
-      "time_range": "9:00 - 18:00",
-      "trainee_name": "John Doe",
-      "trainee_title": "Coach"
-    },
-    {
-      "url": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=269",
-      "title": "Training Program 20",
-      "address": "789 Pine Ln, Suburbia, TX 75001",
-      "date": "2025-01-14",
-      "price": 432.42,
-      "discount_price": 284.6,
-      "time_range": "9:00 - 16:00",
-      "trainee_name": "Alex Johnson",
-      "trainee_title": "Senior Trainer"
+      "price": 392.87,
+      "discount_price": 274.32,
+      "time_range": "9:00 am - 9:00 pm",
+      "trainee_name": "Jane Smith",
+      "trainee_title": "Training Specialist",
+      "summary": "Comprehensive training on human resource management practices, legal compliance, and more."
     }
   ];
 }

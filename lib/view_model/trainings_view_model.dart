@@ -7,6 +7,17 @@ class TrainingsViewModel extends ChangeNotifier {
     getTrainingsData();
   }
 
+  List<String> _filters = [];
+  List<String> get filters => _filters;
+  set filters(List<String> val) {
+    _filters = val;
+    notifyListeners();
+  }
+  set removeFilter(String val) {
+    _filters.remove(val);
+    notifyListeners();
+  }
+
   int limit = 5;
 
   bool _noMore = false;
@@ -30,10 +41,22 @@ class TrainingsViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  List<Training> _allTrainings = [];
+  List<Training> get allTrainings => _allTrainings;
+  set allTrainings(List<Training> val) {
+    _allTrainings = val;
+    notifyListeners();
+  }
+  List<Training> get filteredTrainings => _filters.isEmpty? _trainings:_allTrainings.where((Training training) {
+  String trainingText = '${training.title} ${training.address} ${training.traineeName} ${training.traineeTitle}';
+  return _filters.every((filter) => trainingText.toLowerCase().contains(filter.toLowerCase()));
+  }).toList();
+
   Future<void> getTrainingsData({int? currentLimit}) async {
     loading = true;
     int newLimit = currentLimit ?? (limit + trainings.length);
     await Future.delayed(const Duration(seconds: 1)).then((_) {
+      allTrainings = List.of(TrainingData.trainingsProvided.map((e) => Training.fromJson(e)));
       List<Training> fetchedTrainings = List.of(TrainingData.trainingsProvided.take(newLimit).map((e) => Training.fromJson(e)));
       trainings = fetchedTrainings;
       if (trainings.length  == 20) {

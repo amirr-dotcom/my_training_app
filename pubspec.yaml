@@ -74,6 +74,12 @@ flutter:
   assets:
      - assets/translations/
 
+  fonts:
+    - family: Accolade
+      fonts:
+        - asset: assets/fonts/Accolade-Regular.ttf
+        - asset: assets/fonts/Accolade-Bold.ttf
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

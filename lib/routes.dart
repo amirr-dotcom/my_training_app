@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_training_app/app_manager/constant/color_constant.dart';
-import 'package:my_training_app/model/training_model.dart';
 import 'package:my_training_app/view/screens/home_screen/home_screen.dart';
-import 'package:my_training_app/view/screens/splash_screen.dart';
 import 'package:my_training_app/view/screens/training_details_screen.dart';
 import 'package:my_training_app/view_model/trainings_view_model.dart';
 import 'package:provider/provider.dart';
@@ -35,12 +33,6 @@ CustomTransitionPage buildPageWithDefaultTransition<T>({
 }
 
 List<RouteBase> routes = [
-  GoRoute(
-    name: SplashScreen.name,
-    path: SplashScreen.path,
-    pageBuilder: (context, state) => buildPageWithDefaultTransition(
-        context: context, state: state, child: const SplashScreen()),
-  ),
   GoRoute(
     name: HomeScreen.name,
     path: HomeScreen.path,
